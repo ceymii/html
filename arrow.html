@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        ul{
+            display: inline-block;
+            position: relative;
+            left: 50%;
+            margin-left: -20%;
+            margin-top: 250px;
+        }
+        ul:after{
+            clear:both;
+            content:"";
+            width: 0;
+            height: 0;
+            display:block;
+            line-height:0;
+            visibility:hidden;
+        }
+        li{
+            width: 80px;
+            height: 25px;
+            float: left;
+            font-size: 12px;
+            color: #666;
+            border-top: 1px solid #e5e5e5;
+            border-bottom: 1px solid #e5e5e5;
+            position: relative;
+            text-align: center;
+            line-height: 25px;
+        }
+        li.left{
+            border-left: 1px solid #e5e5e5;
+        }
+        li.right{
+            border-right: 1px solid #e5e5e5;
+        }
+        .changegray{
+            background-color: #f6f6f6;
+        }
+        .changegray:after{
+            content:"";
+            width:0;
+            height:0;
+            border-width: 12.5px 0 12.5px 13px ;
+            border-style:solid;
+            border-color: transparent transparent transparent #f6f6f6;
+            position: absolute;
+            left: 79px;
+        }
+        .changegray:before{
+            content:"";
+            width:0;
+            height:0;
+            border-width: 12.5px 0 12.5px 13px ;
+            border-style:solid;
+            border-color: #f6f6f6 #f6f6f6 #f6f6f6 transparent;
+            position: absolute;
+            left:79px;
+        }
+
+        .changegray4{
+            background-color: #f6f6f6;
+        }
+        .changegray4:before{
+            content:"";
+            width:0;
+            height:0;
+            border-width: 12.5px 0 12.5px 13px ;
+            border-style:solid;
+            border-color: #f6f6f6 #f6f6f6 #f6f6f6 transparent;
+            position: absolute;
+            left:79px;
+        }
+
+        .changegray1{
+            background-color: #f6f6f6;
+        }
+        .changegray1:after{
+            content:"";
+            width:0;
+            height:0;
+            border-width: 12.5px 0 12.5px 13px ;
+            border-style:solid;
+            border-color: transparent transparent transparent #f6f6f6;
+            position: absolute;
+            left: 79px;
+        }
+
+        .changeblue4{
+            background-color: #108ee9;
+            color:#fff;
+        }
+        .changeblue4:before{
+            content:"";
+            width:0;
+            height:0;
+            border-width: 12.5px 0 12.5px 13px ;
+            border-style:solid;
+            border-color: #108ee9 #108ee9 #108ee9 transparent;
+            position: absolute;
+            right:79px;
+        }
+
+        .changeblue1:after{
+            content:"";
+            width:0;
+            height:0;
+            border-width: 12.5px 0 12.5px 13px ;
+            border-style:solid;
+            border-color: transparent transparent transparent #108ee9;
+            position: absolute;
+            left: 79px;
+        }
+        .changeblue1{
+            background-color: #108ee9;
+            color:#fff;
+        }
+        .changeblue:after{
+             content:"";
+             width:0;
+             height:0;
+             border-width: 12.5px 0 12.5px 13px ;
+             border-style:solid;
+             border-color: transparent transparent transparent #108ee9;
+             position: absolute;
+             left: 79px;
+         }
+        .changeblue:before{
+            content:"";
+            width:0;
+            height:0;
+            border-width: 12.5px 0 12.5px 13px ;
+            border-style:solid;
+            border-color: #108ee9 #108ee9 #108ee9 transparent;
+            position: absolute;
+            right:79px;
+        }
+        .changeblue{
+            background-color: #108ee9;
+            color:#fff;
+        }
+        .havewhite:after{
+            content:"";
+            width:0;
+            height:0;
+            border-width: 12.5px 0 12.5px 13px ;
+            border-style:solid;
+            border-color: transparent transparent transparent #fff;
+            position: absolute;
+            left: 79px;
+        }
+        .havewhite1:after{
+            content:"";
+            width:0;
+            height:0;
+            border-width: 12.5px 0 12.5px 13px ;
+            border-style:solid;
+            border-color: transparent transparent transparent #fff;
+            position: absolute;
+            left: 79px;
+        }
+        .havewhite:before{
+            content:"";
+            width:0;
+            height:0;
+            border-width: 12.5px 0 12.5px 13px ;
+            border-style:solid;
+            border-color: #fff #fff #fff transparent;
+            position: absolute;
+            right:79px;
+        }
+        .havewhite4:before{
+            content:"";
+            width:0;
+            height:0;
+            border-width: 12.5px 0 12.5px 13px ;
+            border-style:solid;
+            border-color: #fff #fff #fff transparent;
+            position: absolute;
+            right:79px;
+        }
+        .after{
+            float: left;
+            display: inline-block;
+            width: 0;
+            height: 0;
+            z-index: 5;
+        }
+        .after1{
+            border-top: 13.5px solid transparent;
+            border-left: 15px solid #e5e5e5;
+            border-bottom: 13.5px solid transparent;
+        }
+        .after2{
+            border-top: 13.5px solid #e5e5e5;
+            border-left: 15px solid transparent;
+            border-bottom: 13.5px solid #e5e5e5;
+        }
+        .stop{
+            width: 95px;
+            border:1px solid #d0021b;
+            color:#d0021b;
+        }
+
+    </style>
+</head>
+<body>
+<ul>
+    <li class="left havewhite1">草稿</li><div class="after after1 last"></div>
+    <div class="after after2"></div><li class="havewhite">待审核</li><div class="after after1"></div>
+    <div class="after after2"></div><li class="havewhite">待复核</li><div class="after after1"></div>
+    <div class="after after2"></div><li class="havewhite4 right">已核准</li>
+</ul>
+<script>
+    var json  =   [{"name":"待接单","status":"WAIT_ACCEPT","isShadowed":true},{"name":"待发货","status":"WAIT_DELIVER","isShadowed":true,"isCurrentStatus":true},
+        {"name":"验货入库","status":"STOCK_IN"},{"name":"已完成","status":"DELIVERED"}];
+    change(json);
+
+    function change(arr) {
+        var times = 0;
+        var mli = document.querySelectorAll("li");
+
+        for (var one in arr){
+            times ++;
+            var key = Object.keys(arr[one]);
+            var value = Object.values(arr[one]);
+            var blue =false,gray = false;
+            mli[times-1].innerHTML = arr[one].name;
+            for(var i = 0;i < key.length;i++){
+                if(key[i] == "isShadowed" && value[i] == true ){
+                    gray = true;
+                }
+                if( key[i] == "isCurrentStatus" && value[i] == true){
+                    blue = true;
+                }
+                if(blue && gray){
+                    if((times-1) == 0){
+                        mli[times-1].className = "changeblue1";
+                    }else if((times-1) == 3){
+                        mli[times-1].className = "changeblue4";
+                    }
+                    else {
+                        mli[times-1].className = "changeblue";
+                    }
+
+                }else if(gray && !blue){
+                    if((times-1) == 0){
+                        mli[times-1].className = "changegray1";
+                    }else if((times-1) == 3){
+                        mli[times-1].className = "changegray4";
+                    }
+                    else{
+                        mli[times-1].className = "changegray";
+                    }
+                }
+            }
+            if(arr.length == 1){
+                mli[0].className = "stop";
+                var last = document.querySelector(".last");
+                last.style.display = "none";
+            }
+        }
+    }
+
+</script>
+</body>
+</html>
